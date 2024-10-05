@@ -11,7 +11,9 @@ public class four_Sum {
         int right = nums.length - 1;
         while (curr2 < nums.length - 2) {
             if (nums.length == 4 && nums[curr] + nums[curr2] + nums[left] + nums[right] == target) {
+
                 return new int[]{curr, curr2, left, right};
+
             }
             if (nums[curr] + nums[curr2] + nums[left] + nums[right] == target) {
                 return new int[]{nums[curr], nums[curr2],nums[left],nums[right]};

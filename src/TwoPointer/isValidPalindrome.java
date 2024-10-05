@@ -26,6 +26,6 @@ public class isValidPalindrome {
     }
 
     public static void main(String[] args) {
-        System.out.println(isValidPalindrome("abcccddba"));
+        System.out.println(isValidPalindrome("abcccba"));
     }
 }

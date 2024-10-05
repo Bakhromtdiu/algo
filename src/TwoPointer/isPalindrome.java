@@ -3,18 +3,18 @@ package TwoPointer;
 public class isPalindrome {
 
     public static boolean isPalindrome(String s) {
-
-        int left_pointer = 0, right_pointer = s.length() - 1;
-        while (left_pointer < right_pointer) {
-            if (s.charAt(left_pointer) != s.charAt(right_pointer))
+        int left_Pointer = 0;
+        int right_Pointer = s.length() - 1;
+        while (left_Pointer < right_Pointer) {
+            if (s.charAt(left_Pointer) != s.charAt(right_Pointer))
                 return false;
-            left_pointer++;
-            right_pointer--;
+            left_Pointer++;
+            right_Pointer--;
         }
         return true;
     }
 
     public static void main(String[] args) {
-        System.out.println(isPalindrome("abca"));
+        System.out.println(isPalindrome("abba"));
     }
 }

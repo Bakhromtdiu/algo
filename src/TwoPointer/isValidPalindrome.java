@@ -2,15 +2,15 @@ package TwoPointer;
 
 public class isValidPalindrome {
     public static boolean isValidPalindrome(String s) {
-        int left_pointer = 0, right_pointer = s.length() - 1;
-        while (left_pointer < right_pointer) {
-            if (s.charAt(left_pointer) != s.charAt(right_pointer)) {
-                return helper(s, left_pointer++, right_pointer) || helper(s, left_pointer, right_pointer--);
+        int left_Pointer = 0;
+        int right_Pointer = s.length() - 1;
+        while (left_Pointer < right_Pointer) {
+            if (s.charAt(left_Pointer) != s.charAt(right_Pointer)) {
+                return helper(s,left_Pointer+1,right_Pointer) || helper(s,left_Pointer,right_Pointer-1);
             }
-            left_pointer++;
-            right_pointer--;
+            left_Pointer++;
+            right_Pointer--;
         }
-
         return true;
     }
 
@@ -26,6 +26,6 @@ public class isValidPalindrome {
     }
 
     public static void main(String[] args) {
-        System.out.println(isValidPalindrome("abcddba"));
+        System.out.println(isValidPalindrome("abcccddba"));
     }
 }
